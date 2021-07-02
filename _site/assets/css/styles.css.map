@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n",
+		"body {\n  background-color: rgb(20, 20, 20);\n  color: #fff;\n}\na {\n  color: rgb(2, 170, 38);\n  text-decoration: none;\n}\n"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,IAAI,CAAC,EACH,gBAAgB,EAAE,OAAe,EACjC,KAAK,EAAE,IAAI,GACZ;;AACD,AAAA,CAAC,CAAC,EACA,KAAK,EAAE,OAAe,EACtB,eAAe,EAAE,IAAI,GACtB"
+}
