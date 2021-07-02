@@ -1,11 +1,35 @@
-{% include navbar.html %}
-{% if page.hero %}
-	<img src="{{page.hero}}">
-{% endif %}
-{% if page.title%}
-	<h1>{{page.title}}</h1>
-{% else %}
-	<h1>Untitled post</h1>
-{% endif %}
-{{ page.date | date: "%b %d, %Y" }}
-{{ content }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{page.title}}</title>
+    {% include head.html %}
+  </head>
+  <body id="top">
+    {% include navbar.html %}
+
+    <div
+      class="wrapper bgded overlay"
+      style="background-image: url('{{page.hero}}')"
+    >
+      <div id="breadcrumb" class="hoc clear">
+        {% if page.title%}
+        <h6 class="heading">{{page.title}}</h6>
+        {% else %}
+        <h6 class="heading">{{page.title}}</h6>
+        {% endif %}
+        <p>{{ page.date | date: "%b %d, %Y" }}</p>
+      </div>
+    </div>
+
+    <div class="wrapper row3">
+      <main class="hoc container clear">
+        <div class="content">{{ content }}</div>
+
+        <div class="clear"></div>
+      </main>
+    </div>
+
+	{% include footer.html %}
+    {% include script.html %}
+  </body>
+</html>

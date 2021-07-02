@@ -40,6 +40,8 @@ GEM
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.1.0)
     ffi (1.15.3)
+    font-awesome-sass (5.15.1)
+      sassc (>= 1.11)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
     github-pages (215)
@@ -127,6 +129,9 @@ GEM
       jekyll (~> 3.0)
     jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
+    jekyll-font-awesome-sass (0.1.1)
+      font-awesome-sass (>= 4)
+      jekyll (>= 2.5, < 4.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
     jekyll-github-metadata (2.13.0)
@@ -221,8 +226,6 @@ GEM
     multipart-post (2.1.1)
     nokogiri (1.11.7-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.11.7-x86_64-darwin)
-      racc (~> 1.4)
     octokit (4.21.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
@@ -245,6 +248,8 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
@@ -269,6 +274,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.12)
+  jekyll-font-awesome-sass
   minima (~> 2.5)
   tzinfo (~> 1.2)
   tzinfo-data

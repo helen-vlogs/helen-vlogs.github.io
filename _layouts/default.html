@@ -1,12 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
     <title>{{page.title}}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-	{% include navbar.html %}
-    {{ content }}
-</body>
+    {% include head.html %}
+  </head>
+  <body id="top">
+    {% include navbar.html %}
+
+    <div
+      id="pageintro"
+      class="wrapper row1 bgded"
+      style="background-image: url('/assets/images/cover.png')"
+    >
+      <figure class="hoc clear">
+        <figcaption class="heading">Viverra libero euismod ultrices</figcaption>
+        <img src="/assets/images/profile.jpeg" alt="" />
+      </figure>
+    </div>
+
+    <div class="wrapper row3">
+      <main class="hoc container clear">
+        <div class="sectiontitle">
+          <h6 class="heading">Life event</h6>
+          <p>Some life event here</p>
+        </div>
+        <ul id="services" class="nospace group">
+          <li class="one_third">
+            <article>
+              <h6 class="heading">
+                <i class="fas fa-certificate"></i>
+                <a href="#">Semper nisi nec pretium</a>
+              </h6>
+              <p>
+                Sed finibus nam vitae tempor turpis fusce mollis massa vitae
+                vestibulum porta [&hellip;]
+              </p>
+              <footer>
+                <a href="#">View Details <i class="fas fa-angle-right"></i></a>
+              </footer>
+            </article>
+          </li>
+          <li class="one_third">
+            <article>
+              <h6 class="heading">
+                <i class="fas fa-chess-king"></i>
+                <a href="#">Lectus neque vehicula</a>
+              </h6>
+              <p>
+                Nec vehicula magna vivamus auctor nec leo eget iaculis quisque
+                lorem risus tempor [&hellip;]
+              </p>
+              <footer>
+                <a href="#">View Details <i class="fas fa-angle-right"></i></a>
+              </footer>
+            </article>
+          </li>
+          <li class="one_third">
+            <article>
+              <h6 class="heading">
+                <i class="fas fa-fighter-jet"></i>
+                <a href="#">Nullam volutpat ex</a>
+              </h6>
+              <p>
+                Vitae elit vitae laoreet egestas massa nullam bibendum arcu eget
+                eros vehicula [&hellip;]
+              </p>
+              <footer>
+                <a href="#">View Details <i class="fas fa-angle-right"></i></a>
+              </footer>
+            </article>
+          </li>
+        </ul>
+        <footer class="center">
+          <a class="btn" href="#"
+            >Quis vehicula nulla <i class="fas fa-angle-right"></i
+          ></a>
+        </footer>
+
+        <div class="clear"></div>
+      </main>
+    </div>
+
+    <div class="wrapper coloured">
+      <article class="hoc cta clear">
+        <h6 class="three_quarter first">
+          Varius quisque semper dolor eget neque dictum ac faucibus leo
+          fermentum
+        </h6>
+        <footer class="one_quarter">
+          <a class="btn" href="#"
+            >Suspendisse sapien <i class="fas fa-angle-right"></i
+          ></a>
+        </footer>
+      </article>
+    </div>
+
+    <div
+      class="wrapper bgded overlay"
+      style="background-image: url('images/demo/backgrounds/01.png')"
+    >
+      <section id="introblocks" class="hoc container clear">
+        <div class="sectiontitle">
+          <h6 class="heading">Reviews</h6>
+          <p>
+            Some reviews text here
+          </p>
+        </div>
+        <ul class="nospace group">
+          <li class="one_third first">
+            <article>
+              <a href="#"><i class="fas fa-lemon"></i></a>
+              <h6 class="heading">Lectus interdum urna</h6>
+              <p>
+                Mollis ut curabitur varius nibh nec dolor volutpat in sagittis
+                mi semper nullam placerat quis [&hellip;]
+              </p>
+              <footer>
+                <a class="btn" href="#"
+                  >Read More <i class="fas fa-angle-right"></i
+                ></a>
+              </footer>
+            </article>
+          </li>
+          <li class="one_third">
+            <article>
+              <a href="#"><i class="fas fa-street-view"></i></a>
+              <h6 class="heading">Nibh justo nunc varius</h6>
+              <p>
+                Ex nec iaculis phasellus ultricies nisi a elit vestibulum
+                posuere class aptent taciti sociosqu [&hellip;]
+              </p>
+              <footer>
+                <a class="btn" href="#"
+                  >Read More <i class="fas fa-angle-right"></i
+                ></a>
+              </footer>
+            </article>
+          </li>
+          <li class="one_third">
+            <article>
+              <a href="#"><i class="fas fa-volleyball-ball"></i></a>
+              <h6 class="heading">Neque pretium nunc</h6>
+              <p>
+                Ad litora torquent per conubia nostra per inceptos himenaeos
+                praesent fringilla tempor quam in [&hellip;]
+              </p>
+              <footer>
+                <a class="btn" href="#"
+                  >Read More <i class="fas fa-angle-right"></i
+                ></a>
+              </footer>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="wrapper row3">
+      <section class="hoc container clear">
+        <div class="sectiontitle">
+          <h6 class="heading">Blog posts</h6>
+          <p>Some text here</p>
+        </div>
+        <div id="latest" class="group">
+          {% assign firstpost = site.posts.first %}
+          <article class="one_half first">
+            <a class="imgover" href="{{firstpost.url}}"
+              ><img style="height: 300px;" src="{{firstpost.hero}}" alt=""
+            /></a>
+            <div class="excerpt">
+              <h6 class="heading">{{ firstpost.title }}</h6>
+              <div class="blog_max_line_to_show">{{ firstpost.content }} &hellip;</div>
+              <div class="clear">
+                <footer class="fl_right">
+                  <a href="{{firstpost.url}}">Read More <i class="fas fa-angle-right"></i></a>
+                </footer>
+                <ul class="nospace meta fl_left">
+                  <li>
+                    <i class="fas fa-user"></i>
+                    <a href="{{firstpost.url}}">{{ firstpost.date | date: "%b %d, %Y" }}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          {% assign lastpost = site.posts.last %}
+          <article class="one_half">
+            <a class="imgover" href="{{lastpost.url}}"
+              ><img style="height: 300px;" src="{{lastpost.hero}}" alt=""
+            /></a>
+            <div class="excerpt">
+              <h6 class="heading">{{ lastpost.title }}</h6>
+              <div class="blog_max_line_to_show">{{ lastpost.content }} &hellip;</div>
+              <div class="clear">
+                <footer class="fl_right">
+                  <a href="{{lastpost.url}}">Read More <i class="fas fa-angle-right"></i></a>
+                </footer>
+                <ul class="nospace meta fl_left">
+                  <li>
+                    <i class="fas fa-user"></i>
+                    <a href="{{lastpost.url}}">{{ lastpost.date | date: "%b %d, %Y" }}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <footer class="center">
+          <a class="btn" href="#"
+            >View More Posts <i class="fas fa-angle-right"></i
+          ></a>
+        </footer>
+      </section>
+    </div>
+
+    {% include footer.html %} {% include script.html %}
+  </body>
 </html>
